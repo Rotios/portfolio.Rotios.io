@@ -60,5 +60,7 @@ typings/
 # next.js build output
 .next
 
-babel.html
-react.html
+
+dist
+
+package-lock.json
