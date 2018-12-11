@@ -27,9 +27,9 @@ class ExampleWorkModal extends React.Component {
                         target="_blank">
                             Check it out!
                         </a>
-                    <p className="modal__description">
+                    <div className="modal__description">
                         { example.desc }
-                    </p>
+                    </div>
                 </div>
             </div>
         )
