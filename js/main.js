@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work'
+import ExampleWorkModal from './example-work-modal';
 
-console.log("test")
 
 const myWork = [
     {
         'title':"Work Example",
+        'href' : 'https://example.com',
+        'desc' : 'lorem ipsum',
         'image' : {
             "desc" : "Example",
             'src' : 'images/example1.png',
@@ -15,6 +17,8 @@ const myWork = [
     },
     {
         'title':"Work Example",
+        'href' : 'https://example.com',
+        'desc' : 'lorem ipsum',
         'image' : {
             "desc" : "Example",
             'src' : 'images/example2.png',
@@ -23,6 +27,8 @@ const myWork = [
     },
     {
         'title':"Work Example",
+        'href' : 'https://example.com',
+        'desc' : 'lorem ipsum',
         'image' : {
             "desc" : "Example",
             'src' : 'images/example3.png',
