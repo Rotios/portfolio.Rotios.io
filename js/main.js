@@ -37,9 +37,17 @@ const myWork = [
         }
     },
     {
-        'title':"Work Example",
-        'href' : 'https://example.com',
-        'desc' : 'lorem ipsum',
+        'title': "FF2EPub",
+        'href' : 'https://github.com/Rotios/FF2EPUB',
+        'desc' : <div>
+            <p>
+                A quick Fanfiction.net to EPub converter for those who like to take their fanfiction on the go.
+                Future uses will convert it to a PDF and to .mobi for Amazon Kindle.
+            </p>
+            <p>
+                Written and tested for Python 3.7. 
+            </p>
+        </div>,
         'image' : {
             "desc" : "Example",
             'src' : 'images/example2.png',

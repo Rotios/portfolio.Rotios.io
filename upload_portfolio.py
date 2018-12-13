@@ -9,15 +9,18 @@ def lambda_handler(event, context):
     job = None
     try:
         job = event.get('CodePipeline.job')
+        print(event)
         
         build_bucket_location = {
             'bucketName' : 'portfoliobuild.rotios.io',
             'objectKey' : 'BuildPortfolio.zip'
         }
         if job:
+            print("using job information")
             for artifact in job['data']['inputArtifacts']:
-                if artifact['name'] == 'MyAppBuild':
+                if artifact['name'] == 'BuildArtifact':
                     build_bucket_location = artifact['location']['s3Location']
+                    print("Using build bucket Location", build_bucket_location)
 
         s3 = boto3.resource('s3', config = Config(signature_version='s3v4'))
         sns = boto3.resource('sns')
@@ -39,9 +42,11 @@ def lambda_handler(event, context):
                 portfolio_bucket.Object(nm).Acl().put(ACL='public-read')
 
         topic.publish(Subject="Rotios IO Portfolio built successfully", Message="The build was successful.")        
+
         if job:
             codepipeline = boto3.client('codepipeline')
             codepipeline.put_job_success_result(jobId=job['id'])
+        
         return "Success"
     except Exception as e:
         if job:
