@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work'
-import ExampleWorkModal from './example-work-modal';
+import Title from './title'
 
 
 const myWork = [
@@ -67,3 +67,4 @@ const myWork = [
 ]
 
 ReactDOM.render(<ExampleWork work = {myWork} />, document.getElementById("example-work"))
+ReactDOM.render(<Title />, document.getElementById("main-header"))
