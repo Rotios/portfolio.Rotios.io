@@ -229,3 +229,11 @@ h1, h2, h3, h4, h5, h6 {
 .modal__image {
   opacity: 0.2;
 }
+
+.project {
+  font-size: 4.2rem;
+  min-height: 10vh;
+  position: relative;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}

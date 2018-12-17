@@ -2,10 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ExampleWork from './example-work'
 import Title from './title'
-
+import Project from './project'
+import FF2EPub from './projects/ff2epub'
 
 const myWork = [
     {
+        'id':'tonys-adventure',
         'title':"Tony's Adventure",
         'href' : 'http://rotios.github.io/The-Adventures-of-Fat-Tone/',
         'desc' : <div>
@@ -37,8 +39,10 @@ const myWork = [
         }
     },
     {
+        'id' : 'ff2epub',
         'title': "FF2EPub",
         'href' : 'https://github.com/Rotios/FF2EPUB',
+        'github': 'https://github.com/Rotios/FF2EPUB',
         'desc' : <div>
             <p>
                 A quick Fanfiction.net to EPub converter for those who like to take their fanfiction on the go.
@@ -53,18 +57,28 @@ const myWork = [
             'src' : 'images/example2.png',
             'comment': ''
         }
-    },
-    {
-        'title':"Work Example",
-        'href' : 'https://example.com',
-        'desc' : 'lorem ipsum',
-        'image' : {
-            "desc" : "Example",
-            'src' : 'images/example3.png',
-            'comment': ''
-        }
     }
 ]
 
-ReactDOM.render(<ExampleWork work = {myWork} />, document.getElementById("example-work"))
 ReactDOM.render(<Title />, document.getElementById("main-header"))
+
+if (document.getElementById('example-work')){
+    ReactDOM.render(<ExampleWork work = {myWork} />, document.getElementById("example-work"))
+}
+
+if (document.getElementsByClassName('project')) {
+    console.log("got element")
+    var elements = document.getElementsByClassName('project')
+    var i;
+    for (i = 0; i < elements.length; i++) {
+        console.log(elements[i].id)
+        var id = elements[i].id
+        if (id == 'tonys-adventure') {
+            ReactDOM.render(<Project id={id} work={myWork[0]} />, elements[i])
+        } else if (id == 'ff2epub') {
+            console.log("ff2epub")
+            ReactDOM.render(<Project id={id} work={myWork[1]} component={<FF2EPub work={myWork[1]}/>} />, elements[i])
+        }
+    }
+    // ReactDOM.render()
+}
