@@ -14,4 +14,6 @@ artifacts:
     - images/*
     - dist/bundle.js
     - js/*
-    - projects/*.htl
+    - js/projects/*
+    - js/common/*
+    - projects/*.html
