@@ -20,7 +20,11 @@ class Project extends React.Component {
                     <em>{work.desc}</em>
                 
                 </div>
+                
                 <div className="project--description">
+                
+                    <hr/>
+                    <h1>Description</h1>
                     {work.longDesc}
                 </div>
 

@@ -75,9 +75,6 @@ const myWork = [
             </p>
         </div>,
         'longDesc' : <div>
-            <hr/>
-            <h1>Description</h1>
-
             <p>
                 I've got a confession to make... I like reading fanfiction... And not those sloppy, poorly written <em>lemons</em> (as the FF community calls them)
                 or simple <em>one-shots</em>, but actual stories which take the time to flesh out their characters, contain real plots, and don't promote any <em>fanservice</em>.
