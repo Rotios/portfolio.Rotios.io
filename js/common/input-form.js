@@ -9,11 +9,12 @@ class InputForm extends React.Component {
     }
 
     handleChange(event, tag) {
-        console.log('called change')
-        this.props.handleChange(event)
+        console.log("handle event")
+        this.props.handleChange(event, tag)
     }
 
     handleSubmit(event) {
+        console.log("Handle Submit")
         this.props.handleSubmit(event)
     }
     
@@ -21,20 +22,15 @@ class InputForm extends React.Component {
         return (
             <div>
             <form onSubmit={this.handleSubmit}>
-
-                {this.props.formInfo.entries.map(
+                {Object.keys(this.props.formInfo).map(
                     (formData, idx) => {
                         return(
-                            <FormLabels key={idx} formInfo={formData} handleChange={this.handleChange}/>
+                            <FormLabels key={idx} formInfo={this.props.formInfo[formData]} handleChange={this.handleChange}/>
                         )
                     }
                 )}
-
                 <input type="submit" value="Submit" />
             </form>
-            <p>
-                {this.props.formValue}
-            </p>
             </div>
         );
     }
@@ -42,11 +38,20 @@ class InputForm extends React.Component {
 
 class FormLabels extends React.Component {
     render() {
-       return( <label>
-            {this.props.formInfo.label}
-            <input name={this.props.formInfo.id} type="text" value={this.props.formInfo.value} onChange={this.props.handleChange} />
-        </label>
-       )
+        console.log("rendered again")
+        console.log(this.props)
+        return( 
+            <div>
+                <label>
+                    {this.props.formInfo.label + ": "}
+                </label>
+                <input name={this.props.formInfo.id}
+                    type="text" 
+                    value={this.props.formInfo.value} 
+                    onChange={this.props.handleChange} />
+                <br/>
+            </div>
+        )
     }
 }
 

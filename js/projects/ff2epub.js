@@ -6,18 +6,6 @@ class FF2EPub extends React.Component {
         super(props)
 
         this.state = {
-            // 'formData': [
-            //     {
-            //         'id' : 'ff_net_id',
-            //         'label' : 'FF.net ID',
-            //         'value' : ''
-            //     },
-            //     {
-            //         'id': 'email',
-            //         'label' : 'email',
-            //         'value' : ''
-            //     }
-            // ]
             'formData': {
                 'ff_net_id' :{
                     'id' : 'ff_net_id',
@@ -39,26 +27,21 @@ class FF2EPub extends React.Component {
 
     handleInputChange(event) {
         const target = event.target;
+        console.log("handle change parent")
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
-
-        console.log(target.key)
     
-        this.setState({
-            [name]: value
-        });
+        this.state['formData'][name]['value'] = value
+        this.setState(this.state)
     }
 
     handleSubmit (event) {
-        console.log('parent handle submit')
-
-        alert('A name was : ' + this.state.value);
+        console.log("Handle submit")
     };
     
     render() {
 
         let formData = this.state.formData
-        
 
         return (
             <span>

@@ -8,16 +8,30 @@ class Project extends React.Component {
     render() {
         var work = this.props.work
         var component = this.props.component
+        console.log(work.longDesc)
         return (
-            <div>
+            <section>
                 <section className="background--skyBlue section section--alignCentered">
                     <h2 className="color--cloud margin--none section__text--centered">
                         {work.title}
                     </h2>
                 </section>
+                <div className="project--short-description">
+                    <em>{work.desc}</em>
+                
+                </div>
+                <div className="project--description">
+                    {work.longDesc}
+                </div>
 
-                {component}
-            </div>
+                <hr/>
+
+                <div className="project--demo-header">
+                    <h1 align="center">Demo - COMING SOON</h1>
+                </div>
+                
+                {/* {component} */}
+            </section>
             
         )
     }
