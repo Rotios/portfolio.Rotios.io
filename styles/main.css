@@ -69,6 +69,15 @@ h1, h2, h3, h4, h5, h6 {
   Helpers
 */
 
+.display--inline {
+  display: 'inline'
+}
+
+
+.display--inline-block {
+  display: 'inline-block'
+}
+
 .margin--none {
   margin: 0;
 }
@@ -188,7 +197,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social {
-  margin-right: 0.75rem;
+  margin-right: 1.4rem;
 }
 
 .socialWrapper:last-child .social {
@@ -241,10 +250,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal__link {
   background-color: white;
-  border-radius: 4px;
+  border-radius: 5rem;
   padding: 0.4rem 1rem;
   text-transform: uppercase;
   text-decoration: none;
+  margin-right: 3rem;
 }
 
 .modal__image {

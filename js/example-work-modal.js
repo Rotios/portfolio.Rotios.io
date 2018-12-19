@@ -9,7 +9,7 @@ class ExampleWorkModal extends React.Component {
         return (
             <div className={ "background--skyBlue modal--" + isOpen } >
                 <span className="color--cloud modal__closeButton"
-                onClick={ this.props.closeModal }
+                    onClick={ this.props.closeModal }
                 >
                     <i className="fa fa-window-close-o"></i>
                 </span>
@@ -22,11 +22,18 @@ class ExampleWorkModal extends React.Component {
                     <h2 className="modal__title">
                         { example.title }
                     </h2>
-                    <a className="color--skyBlue modal__link"
-                        href={ example.href }
-                        target="_blank">
-                            Check it out!
-                        </a>
+                    <div  className="display--inline">
+                        <a className="color--skyBlue modal__link"
+                            href={ example.href }
+                            target="_blank">
+                                Try it Out!
+                            </a>
+                        <a className="color--skyBlue modal__link"
+                            href={ example.github }
+                            target="_blank">
+                                See the Code!
+                            </a>
+                    </div>
                     <div className="modal__description">
                         { example.desc }
                     </div>
