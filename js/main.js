@@ -31,7 +31,7 @@ const myWork = [
                 Which will he go to first? It's up to you to decide...
                 </p>
             <p>
-            Written in Rot.JS with John Freeman (<a style= {{color: 'gray'}} href="https://www.github.com/jcf1">https://www.github.com/jcf1</a>).
+            Written in Rot.JS with John Freeman (<a style= {{color: 'white'}} href="https://www.github.com/jcf1">https://www.github.com/jcf1</a>).
             </p>
         </div> ,
         'longDesc' :  <div>

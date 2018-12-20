@@ -28,22 +28,41 @@ class ExampleWork extends React.Component {
     }
 
     render() {
+        if (this.state.modalOpen) {
+            var elem = (
+                <div>
+                <ExampleWorkBubble example={this.state.selectedExample} openModal={this.openModal} />
+                </div>
+            )
+        } else {
+            var elem = this.props.work.map( 
+                (example,idx) => {
+                    return (
+                        <ExampleWorkBubble example={example} 
+                        key={idx} 
+                        openModal={this.openModal}
+                        />
+                    )
+                }
+            )
+        }
         return (
-            <span>
+        <span>
             <section className="section section--alignCentered section--description">
 
-            {
+            {/* {
                 this.props.work.map( 
                     (example,idx) => {
                         return (
-                            <ExampleWorkBubble  example={example} 
+                            <ExampleWorkBubble example={example} 
                             key={idx} 
                             openModal={this.openModal}
                             />
                         )
                     }
                 )
-            }
+            } */}
+            {elem}
         </section>
 
         <ExampleWorkModal example={this.state.selectedExample} 

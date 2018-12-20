@@ -14,10 +14,6 @@ class ExampleWorkModal extends React.Component {
                     <i className="fa fa-window-close-o"></i>
                 </span>
 
-               {/* <img alt={ image_info.desc }
-                    className="modal__image"
-                    src={image_info.src}/>
-        */}
                 <div className="color--cloud modal__text">
                     <h2 className="modal__title">
                         { example.title }
