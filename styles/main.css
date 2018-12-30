@@ -55,12 +55,13 @@ html {
 }
 
 body {
-  font-family: 'Cardo', serif;
+  font-family: 'Dosis', serif;
+  line-height: 2.8rem;
   margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Dosis', sans-serif;
   letter-spacing: .1rem;
 }
 
@@ -86,6 +87,8 @@ h1, h2, h3, h4, h5, h6 {
   overflow: auto;
 }
 
+/* Project Info */
+
 
 .project--description {
   font-size: 2rem;
@@ -104,6 +107,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.75rem;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+}
+
+.project--info {
+  padding-left: 16.0rem;
+  padding-right: 16.0rem;
 }
 
 
@@ -150,14 +158,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section__exampleWrapper {
+  display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
   margin-right: 4rem;
+  margin: 0.5rem 0;
+    border-radius: 2px;
+    width: 12rem;
+    margin: 1rem 1rem; 
 }
 
 .section__example {
-  border-radius: 100%;
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  margin: 1rem;
 }
 
 .section__example:active {
@@ -167,10 +183,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section__exampleTitle{
-  font-size: 3.4rem;
+  font-size: 2.5rem;
   text-align: center;
+  line-height: 3rem;
   text-transform: uppercase;
   width: 90%;
+  -ms-flex: 1 1;
+    flex: 1 1;
+    padding: 1rem 1.5rem;
+    font-weight: 400;
 }
 
 .section__exampleImage {
@@ -178,6 +199,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 250%;
   margin-left: -50%;
   margin-top: -50%;
+}
+
+
+.section__exampleText {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 3rem;
+  width: 90%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  font-weight: 400;
 }
 
 /*
@@ -219,37 +254,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal--open {
-  border-radius: 10rem;
+  border-radius: 4rem;
   background-color:slategray;
   display: block;
   position: absolute;
   padding: 10rem 10rem;
-  top: 10rem;
-  right: 10rem;
-  bottom: 10rem;
-  left: 10rem;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 46rem;
   z-index: 100;
-  width: 50%;
-  height: 80%;
+  width: 60%;
+  height: 76%;
   overflow: hidden;
   overflow-wrap:hidden;
 }
 
 .modal__closeButton {
-  position: absolute;
+  position: inherit;
   right: 5rem;
   top: 5rem;
   font-size: 4rem;
   z-index: 1;
-  curson: pointer;
+  cursor: pointer;
 }
 
 .modal__text {
-  position: absolute;
+  position: inherit;
   top: 1rem;
   left: 3rem;
   right: 3rem;
-  bottom:1rem;
+  bottom:3rem;
   font-size: 2.4rem;
   padding: 2rem;
   width: 90%;
@@ -266,6 +301,23 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal__image {
   opacity: 0.2;
+}
+
+.modal__unopened {
+  border-radius: 4rem;
+  background-color:slategray;
+  display: block;
+  position: inline;
+  padding: 10rem 10rem;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 46rem;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-wrap:hidden;
 }
 
 /* PROJECT INFO */

@@ -1,5 +1,5 @@
 import React from 'react';
-import InputForm from '../common/input-form'
+import InputForm from '../../common/input-form'
 
 class FF2EPub extends React.Component {
     constructor(props) {
@@ -44,11 +44,10 @@ class FF2EPub extends React.Component {
         let formData = this.state.formData
 
         return (
-            <span>
+        <span>
             <section className="section section--alignCentered section--description">
-
-            <InputForm formInfo={formData} handleSubmit={this.handleSubmit} handleChange={this.handleInputChange} />
-        </section>
+                <InputForm formInfo={formData} handleSubmit={this.handleSubmit} handleChange={this.handleInputChange} />
+            </section>
         </span>
         )
     }
