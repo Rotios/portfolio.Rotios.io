@@ -78,7 +78,7 @@ export default [
     {
         'id' : 'ff2epub',
         'title': "FF2EPub",
-        'href' : 'https://portfolio.rotios.io/projects/ff2epub.html',
+        'href' : '/projects/ff2epub.html',
         'github': 'https://github.com/Rotios/FF2EPUB',
         'shortDesc' : <div>
             <p>
@@ -129,7 +129,7 @@ export default [
             </p>
             <p>
                 Of course, there are plenty of other sites that have a fanfiction to EPub (or at least text/html to EPub) converter already. However, as a software engineer, a lover of code, and a skeptic, 
-                I cannot fully trust a utility which downloads unverifiable files onto my computer without being able to at least see the code first. So without further ado, here's my FF2EPub utility.
+                I cannot bring myself to trust a utility which downloads unverified files onto my computer without being able to see the code myself. So without further ado, here's my FF2EPub utility.
             </p>
         </div>
     }

@@ -1,76 +1,30 @@
 import React from 'react';
-import ExampleWorkModal from './example-work-modal'
 
 class ExampleWork extends React.Component {
     constructor(props) {
-        super(props)
-
-        this.state = {
-            'modalOpen' : false,
-            'selectedExample' : this.props.work[0],
-            'unselectedExamples': this.props.work
-        };
-
-        this.openModal = this.openModal.bind(this)
-        this.closeModal = this.closeModal.bind(this)
-    }
-
-    openModal(evt, example) {
-        this.setState({
-            'modalOpen' : true,
-            'selectedExample': example,
-            'unselectedExamples' : this.props.work.filter(function(value, index, arr){
-                return !(value.id == example.id);
-            })
-        });
-        console.log(this.state.unselectedExamples[0])
-        console.log(this.example)
-    }
-
-    closeModal(evt) {
-        this.setState({
-            'modalOpen': false
-        })
+        super(props)    
     }
 
     render() {
-        if (this.state.modalOpen) {
-            var elem = (
-                
-                <section>
-                        {
-                            this.props.work.map( 
-                            (example,idx) => {
-                                    return (
-                                        <ExampleWorkBubble example={example} 
-                                            key={idx} 
-                                            openModal={this.openModal}
-                                        />
-                                    )
-                                }
-                            )
-                        }
-                        <ExampleWorkModal example={this.state.selectedExample} 
-                            open={this.state.modalOpen} 
-                            closeModal={this.closeModal} />
-                    
-                </section>
-            )
-        } else {
-            var elem = this.props.work.map( 
-                (example,idx) => {
-                    return (
-                        <ExampleWorkBubble example={example} 
-                            key={idx} 
-                            openModal={this.openModal}
-                        />
-                    )
-                }
-            )
-        }
         return (
-        <section className="section section--alignCentered section--description">
-            {elem}
+        <section id="portfolio">
+            <section className="background--skyBlue section">
+                <h2 className="color--cloud margin--none section__text--centered">
+                    Projects
+                </h2>
+            </section>
+
+            <section className="section section--alignCentered section--description">
+                {this.props.work.map( 
+                    (example,idx) => {
+                        return (
+                            <ExampleWorkBubble example={example} 
+                                key={idx}
+                            />
+                        )
+                    }
+                )}
+            </section>
         </section>
         )
     }
@@ -83,12 +37,25 @@ class ExampleWorkBubble extends React.Component {
 
         return (
             <div
-                onClick={ (evt) => this.props.openModal(evt, example) } className="section__example color--cloud">
+                className="section__example color--cloud">
                     <div className="section__exampleTitle">
                         {example.title}
                     </div>
                     <div className="section__exampleText">
                         {example.shortDesc}
+                    </div>
+
+                    <div  className="display--inline section__exampleButtonLayout">
+                        <a className="color--skyBlue section__exampleButton"
+                            href={ example.href }
+                            target="_blank">
+                                Read More!
+                            </a>
+                        <a className="color--skyBlue section__exampleButton"
+                            href={ example.github }
+                            target="_blank">
+                                See the Code!
+                            </a>
                     </div>
             </div>
         )

@@ -12,32 +12,47 @@
   </head>
 
   <body>
-    <main id="main-header" class="overflow--auto"></main>  
-
-    <section class="background--skyBlue section">
-      <h2 class="color--cloud margin--none section__text--centered">
-        Portfolio
-      </h2>
-    </section>
     
-    <noscript>
-      <section class="section section--alignCentered section--description">
-      Please Enable JavaScript.
-    </section>
-    </noscript>
+    <main class="main__background">
+      <div id="main-body" class="main__body">
+        <header id="main-header" class="title__header"></header> 
 
-    <div id="example-work"></div>
-
-    <section class="background--skyBlue section">
-      <h2 class="color--cloud margin--none section__text--centered">
-        About Me
-      </h2>
-    </section>
-
-    <section class="section section--alignCentered section--description">
-    <p class="color--darkgrey section__description">
-      Rotios.IO is Jose Rivas' serverless development website. Here you will find some of the projects he has worked on.
-    </p>
+        <div id="blog-posts"></div>
+    
+          <noscript>
+              <section class="section section--alignCentered section--description">
+              Please Enable JavaScript.
+            </section>
+            </noscript>
+        
+        <noscript>
+          <section class="section section--alignCentered section--description">
+          Please Enable JavaScript.
+        </section>
+        </noscript>
+    
+        <div id="example-work"></div>
+    
+        <section class="background--skyBlue section">
+          <h2 class="color--cloud margin--none section__text--centered">
+            About
+          </h2>
+        </section>
+    
+        <section class="section section--alignCentered section--description">
+        <p class="color--darkgrey section__description">
+          Jose Rivas is (mainly) a Java/Python developer with extensive background in sys-ops and Amazon Web Services (AWS). 
+          Having graduated from Williams College in 2017, his current work focuses on ensuring all applications in his organization
+          adhere to CICD principles and best practices while remaining observable and monitorable throughout their 
+          lifetime.
+        </p>
+    
+        <p class="color--darkgrey section__description">
+          This website was developed using plain old JavaScript, React, CSS, and HTML. It is hosted on AWS 
+          and built through AWS's CodePipeline. As one might expect, the code is hosted on GitHub.
+        </p>
+      </div>
+    </main>
 
     <script type="text/javascript" src="dist/bundle.js"></script>
   </body>
