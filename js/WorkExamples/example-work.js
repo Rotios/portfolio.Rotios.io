@@ -53,8 +53,6 @@ class ExampleWorkBubble extends React.Component {
             }
         }
 
-        console.log(faTools)
-
         return (
             <div
                 className="section__example color--cloud">
