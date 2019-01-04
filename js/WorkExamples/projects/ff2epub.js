@@ -27,7 +27,6 @@ class FF2EPub extends React.Component {
 
     handleInputChange(event) {
         const target = event.target;
-        console.log("handle change parent")
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
     
@@ -36,7 +35,6 @@ class FF2EPub extends React.Component {
     }
 
     handleSubmit (event) {
-        console.log("Handle submit")
     };
     
     render() {

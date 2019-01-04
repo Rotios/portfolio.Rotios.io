@@ -3,8 +3,9 @@ export default [
     {
         'id':'tonys-adventure',
         'title':"Tony's Adventure",
-        'href' : 'http://rotios.github.io/The-Adventures-of-Fat-Tone/',
+        'href' : 'https://rotios.github.io/The-Adventures-of-Fat-Tone/',
         'github' : 'https://github.com/Rotios/The-Adventures-of-Fat-Tone',
+        'demo' : 'https://rotios.github.io/The-Adventures-of-Fat-Tone/',
         'shortDesc' :
             <p>
                 A short Roguelike game written with the Rot.JS library. In conjunction with John Freeman (<a style= {{color: 'white'}} href="https://www.github.com/jcf1">https://www.github.com/jcf1</a>).
@@ -31,6 +32,7 @@ export default [
             Written in Rot.JS with John Freeman (<a style= {{color: 'white'}} href="https://www.github.com/jcf1">https://www.github.com/jcf1</a>).
             </p>
         </div> ,
+        'tools' : ['npm', 'javascript'],
         'longDesc' :  <div>
             <p>
                 A long time ago in a college far, far away I built this game with my friend John Freeman as a part of a month long course on game 
@@ -80,13 +82,11 @@ export default [
         'title': "FF2EPub",
         'href' : '/projects/ff2epub.html',
         'github': 'https://github.com/Rotios/FF2EPUB',
+        'tools' : ['python', 'fa-chrome'],
+        'demo' : 'https://github.com/Rotios/FF2EPUB',
         'shortDesc' : <div>
             <p>
                 A quick Fanfiction.net to EPub converter for those who like to take their fanfiction on the go.
-                Future uses will convert it to a PDF and to .mobi for Amazon Kindle.
-            </p>
-            <p>
-                Written and tested for Python 3.7. 
             </p>
         </div>,
         'desc' : <div>
@@ -132,5 +132,29 @@ export default [
                 I cannot bring myself to trust a utility which downloads unverified files onto my computer without being able to see the code myself. So without further ado, here's my FF2EPub utility.
             </p>
         </div>
+    }, 
+    {
+        'id':'rotios.io',
+        'title':"Rotios.IO",
+        'href' : 'https://portfolio.rotios.io/',
+        'github' : 'https://github.com/Rotios/portfolioexample.Rotios.io',
+        'demo' : 'https://portfolio.rotios.io',
+        'shortDesc' :
+            <p>
+                Jose Rivas's personal development website. Uses Amazon Web Services (AWS) to host and automatically (re)deploy the site.
+            </p>,
+        'desc' : <div>
+            <p>
+                Jose Rivas's personal development website. Written in React + Javascript, uses Amazon Web Services (AWS) to host the site. The site automatically
+                redeploys each time the repo is changed.
+            </p>
+        </div> ,
+        'tools' : ['npm', 'react', 'javascript', "fa-aws"],
+        'longDesc' :  <div>
+            <p>
+                Jose Rivas's personal development website. Written in React + Javascript, uses Amazon Web Services (AWS) to host the site. The site automatically
+                redeploys each time the repo is changed.
+            </p>
+        </div> 
     }
 ]

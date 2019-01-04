@@ -8,7 +8,6 @@ class Project extends React.Component {
     render() {
         var work = this.props.work
         var component = this.props.component
-        console.log(work.longDesc)
         return (
             <section>
                 <section className="background--skyBlue section section--alignCentered">
@@ -32,9 +31,9 @@ class Project extends React.Component {
 
                     <hr/>
 
-                    <div className="project--demo-header">
+                    {/* <div className="project--demo-header">
                         <h1 align="center">Demo - COMING SOON</h1>
-                    </div>
+                    </div> */}
                     
                     {/* {component} */}
                 </section>

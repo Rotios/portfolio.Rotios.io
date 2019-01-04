@@ -17,16 +17,12 @@ class Title extends React.Component {
             <div className="title__header--item">
               <ul className="section--social">
 
-                {/* <!--Links to relevant professional social media & resume -->
-                <!-- See: http://fontawesome.io/icons/#brand for more -->
-
-                <!-- Link to Linked In profile --> */}
                 <li className="socialWrapper">
                   <a className="color--skyBlue social"
                       title="LinkedIn Profile"
                       target="_blank"
                       href="https://www.linkedin.com/in/rotios/">
-                    <i className="fa fa-linkedin"></i>
+                    <i className="fab fa-linkedin"></i>
                   </a>
                 </li>
 
@@ -36,7 +32,7 @@ class Title extends React.Component {
                       title="GitHub Profile"
                       target="_blank"
                       href="https://github.com/Rotios">
-                    <i className="fa fa-github"></i>
+                    <i className="fab fa-github"></i>
                   </a>
                 </li>
               </ul>

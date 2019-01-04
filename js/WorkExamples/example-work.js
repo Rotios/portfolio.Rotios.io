@@ -33,7 +33,27 @@ class ExampleWork extends React.Component {
 class ExampleWorkBubble extends React.Component {
     render() {
         let example = this.props.example;
-        console.log(example)
+        var faTools = [];
+
+        let tools = example.tools;
+        var i = 0;
+        for (i; i < tools.length ; i++) {
+            if (tools[i] == 'python') {
+                faTools.push('fa-python');
+            } else if (tools[i] == 'npm') {
+                faTools.push('fa-npm');
+            } else if (tools[i] == 'github') {
+                faTools.push('fa-github');
+            } else if (tools[i] == 'react') {
+                faTools.push('fa-react');
+            } else if (tools[i] == 'javascript') {
+                faTools.push('fa-js');
+            } else if (tools[i].startsWith('fa')) {
+                faTools.push(tools[i])
+            }
+        }
+
+        console.log(faTools)
 
         return (
             <div
@@ -45,17 +65,34 @@ class ExampleWorkBubble extends React.Component {
                         {example.shortDesc}
                     </div>
 
-                    <div  className="display--inline section__exampleButtonLayout">
+
+                    {
+                        faTools.map(
+                            (t, i) => {
+                                return <p key={i} className={"color--skyBlue section__exampleTool fab " + t}>
+                                </p>
+                            }
+                        )
+                    }
+                    
+                    <div className="display--inline float--center section__exampleButtonLayout">
                         <a className="color--skyBlue section__exampleButton"
                             href={ example.href }
                             target="_blank">
-                                Read More!
-                            </a>
-                        <a className="color--skyBlue section__exampleButton"
+                                More
+                        </a>
+                        
+                        <a className="color--skyBlue section__exampleButton fa__text fab fa-github"
                             href={ example.github }
                             target="_blank">
-                                See the Code!
-                            </a>
+                        </a>
+
+                        
+                        <a className="color--skyBlue section__exampleButton"
+                            href={ example.demo }
+                            target="_blank">
+                                Demo
+                        </a>
                     </div>
             </div>
         )

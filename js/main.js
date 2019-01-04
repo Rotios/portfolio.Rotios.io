@@ -19,14 +19,22 @@ const elements = document.getElementsByClassName('project')
 if (elements) {
     var i;
     for (i = 0; i < elements.length; i++) {
-        console.log(elements[i].id)
         var id = elements[i].id
         if (id == 'tonys-adventure') {
             ReactDOM.render(<Project id={id} work={myWork[0]} component={<TonysAdventure />} />, elements[i])
         } else if (id == 'ff2epub') {
-            console.log("ff2epub")
             ReactDOM.render(<Project id={id} work={myWork[1]} component={<FF2EPub work={myWork[1]}/>} />, elements[i])
         }
     }
     // ReactDOM.render()
+}
+
+const blogPosts = document.getElementsByClassName('blog-post')
+
+if (blogPosts) {
+    var i;
+    for (i = 0; i < blogPosts.length; i++) {
+        var id = blogPosts[i].id
+        
+    }
 }

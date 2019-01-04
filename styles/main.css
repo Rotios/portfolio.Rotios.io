@@ -24,6 +24,15 @@
   background-color: rgb(52, 152, 219);
 }
 
+.background--cloud {
+  background-color: rgb(236, 240, 241);
+}
+
+.section__border--black {
+  border:1px solid;
+  border-color: slategray;
+  border-width: 0.1rem;
+}
 .color--skyBlue {
   color: rgb(52, 152, 219);
 }
@@ -87,12 +96,12 @@ a:visited {
 */
 
 .display--inline {
-  display: 'inline'
+  display: inline;
 }
 
 
 .display--inline-block {
-  display: 'inline-block'
+  display: inline-block;
 }
 
 .margin--none {
@@ -101,33 +110,6 @@ a:visited {
 
 .overflow--auto {
   overflow: auto;
-}
-
-/* Project Info */
-
-
-.project--description {
-  font-size: 2rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
-.project--demo-header {
-  font-size: 3rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
-
-.project--short-description {
-  font-size: 1.75rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
-}
-
-.project--info {
-  padding-left: 16.0rem;
-  padding-right: 16.0rem;
 }
 
 /* HEADER */
@@ -160,7 +142,6 @@ a:visited {
   height:100%;
 }
 
-
 /*
   Sections
 */
@@ -169,8 +150,8 @@ a:visited {
   font-size: 4.2rem;
   min-height: 10vh;
   position: relative;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .section--alignCentered {
@@ -179,14 +160,14 @@ a:visited {
 
 .section--description {
   font-size: 2rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+  padding-left: 2.0rem;
+  padding-right: 2.0rem;
 }
 
 .section__description {
   margin: 0 auto;
   margin-bottom: 2rem;
-  width: 50%;
+  width: 75%;
 }
 
 .section__text--centered {
@@ -209,10 +190,6 @@ a:visited {
   -ms-flex-direction: column;
   flex-direction: column;
   margin-right: 4rem;
-  margin: 0.5rem 0;
-  border-radius: 2px;
-  width: 12rem;
-  margin: 1rem 1rem; 
 }
 
 .section__example {
@@ -220,14 +197,11 @@ a:visited {
   position: relative;
   margin: 1rem;
   padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 30rem;
+  width: 30rem;
+  font-size: 80%;
 }
-
-/* 
-.section__example:active {
-  transition: 0.05s all;
-  width: 34rem;
-  height: 34rem;
-} */
 
 .section__exampleTitle{
   font-size: 2.5rem;
@@ -273,20 +247,32 @@ a:visited {
     padding-right: 2rem;
 }
 
+.section__exampleTool {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 3rem;
+}
+
+
 .section__exampleButton:visited {
   color:white;
 }
 
 .section__exampleButtonLayout {
-  /* display: inline; */
-  padding-bottom: 3rem;
-  padding-top: 2rem;
+  padding: 1rem 1.5rem;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
   flex-direction: row;
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
+  margin-left: 1rem;
 }
 
 /*
@@ -336,25 +322,72 @@ a:visited {
   padding-bottom: 5rem;
 }
 
+.project--description {
+  font-size: 2rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.project--demo-header {
+  font-size: 3rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.project--short-description {
+  font-size: 1.75rem;
+  padding-left: 11rem;
+  padding-right: 11rem;
+}
+
+.project--info {
+  padding-left: 16.0rem;
+  padding-right: 16.0rem;
+}
+
 .main__body {
   margin-right: 30rem;
   margin-left: 30rem;
   background-color: white;
 }
 
-@media (max-width: 1448px) { 
+@media (max-width: 2048px) { 
   .main__body {
     margin-right: 20rem;
     margin-left: 20rem;
     background-color: white;
   }
+  
+  .project--description {
+    font-size: 2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  
+  .project--short-description {
+    font-size: 1.75rem;
+    padding-left: 6rem;
+    padding-right: 16rem;
+  }
 }
 
-@media (max-width: 1024px) { 
+@media (max-width: 1444px) { 
   .main__body {
     margin-right: 10rem;
     margin-left: 10rem;
     background-color: white;
+  }
+  
+  .project--description {
+    font-size: 2rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .project--short-description {
+    font-size: 1.75rem;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -362,4 +395,9 @@ a:visited {
   position: absolute;
   top:0;
   background-color: rgb(236, 240, 241);
+}
+
+.fa__text {
+  font-size: 3.25rem;
+  bottom: 0.5rem;
 }
