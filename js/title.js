@@ -6,9 +6,8 @@ class Title extends React.Component {
           <div className="title__header--container">
 
             <div className="title__header--item">
-              <h1 className="color--skyBlue section__heading--largest">
-                <a href="https://portfolio.rotios.io" className="social">
-                {/* <!--Your name goes here --> */}
+              <h1 className="color--cloud title__header--text">
+                <a href="https://portfolio.rotios.io" className="social color--cloud">
                 ROTIOS.IO
                 </a>
               </h1>

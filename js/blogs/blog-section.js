@@ -1,6 +1,6 @@
 import React from 'react';
 
-class ExampleWork extends React.Component {
+class BlogSection extends React.Component {
     constructor(props) {
         super(props)    
     }
@@ -10,15 +10,15 @@ class ExampleWork extends React.Component {
         <section id="portfolio">
             <section className="background--skyBlue bubble__header--text">
                 <h2 className="color--cloud margin--none section__text--centered">
-                    Projects
+                    Blog Posts
                 </h2>
             </section>
 
             <section className="section section--alignCentered section--description">
-                {this.props.work.map( 
+                {this.props.blog.map( 
                     (example,idx) => {
                         return (
-                            <ExampleWorkBubble example={example} 
+                            <BlogSectionBubble example={example} 
                                 key={idx}
                             />
                         )
@@ -30,7 +30,7 @@ class ExampleWork extends React.Component {
     }
 }
 
-class ExampleWorkBubble extends React.Component {
+class BlogSectionBubble extends React.Component {
     render() {
         let example = this.props.example;
         var faTools = [];
@@ -59,10 +59,10 @@ class ExampleWorkBubble extends React.Component {
                     <div className="section__exampleTitle">
                         {example.title}
                     </div>
+
                     <div className="section__exampleText">
                         {example.shortDesc}
                     </div>
-
 
                     {
                         faTools.map(
@@ -79,22 +79,10 @@ class ExampleWorkBubble extends React.Component {
                             target="_blank">
                                 More
                         </a>
-                        
-                        <a className="color--skyBlue section__exampleButton fa__text fab fa-github"
-                            href={ example.github }
-                            target="_blank">
-                        </a>
-
-                        
-                        <a className="color--skyBlue section__exampleButton"
-                            href={ example.demo }
-                            target="_blank">
-                                Demo
-                        </a>
                     </div>
             </div>
         )
     }
 }
 
-export default ExampleWork
+export default BlogSection

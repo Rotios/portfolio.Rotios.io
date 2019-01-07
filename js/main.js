@@ -6,6 +6,11 @@ import Project from './WorkExamples/project'
 import FF2EPub from './WorkExamples/projects/ff2epub'
 import TonysAdventure from './WorkExamples/projects/tonys-adventure'
 import projects from './WorkExamples/projects/projects'
+import BlogPost from './blogs/blogpost'
+import entries from './blogs/entries'
+import BlogSection from './blogs/blog-section'
+import posts from './blogs/posts'
+import Footer from './footer'
 
 ReactDOM.render(<Title />, document.getElementById("main-header"))
 const myWork = projects
@@ -29,12 +34,23 @@ if (elements) {
     // ReactDOM.render()
 }
 
-const blogPosts = document.getElementsByClassName('blog-post')
+const blogBubbles = document.getElementById('blog')
 
-if (blogPosts) {
-    var i;
-    for (i = 0; i < blogPosts.length; i++) {
-        var id = blogPosts[i].id
-        
+if (blogBubbles) {
+    ReactDOM.render(<BlogSection blog = {entries}/>, blogBubbles);
+}
+
+let blogPosts = document.getElementsByClassName('blog-post')
+
+if (blogPosts && blogPosts.length > 0) {
+    let post = blogPosts[0]
+    if (post.id) {
+        ReactDOM.render(<BlogPost blog={posts[post.id]}/>, post)
     }
+}
+
+let footer = document.getElementById("main-footer");
+
+if (footer) {
+    ReactDOM.render(<Footer />, footer)
 }
