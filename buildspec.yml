@@ -17,3 +17,5 @@ artifacts:
     - js/projects/*
     - js/common/*
     - projects/*.html
+    - blogs/*
+    - projects/*
