@@ -14,7 +14,7 @@ export default {
                 </p>
                 <p>
                     For this article, I will assume that you know about microservice architectures, have a passing knowledge of AWS infrastructure, and 
-                    have developed (or are developing) a Java SpringBoot application.
+                    have developed (or are developing) a Java SpringBoot application with either Log4J2 or Logback as your Logging Framework.
                 </p>
                 
             </div>
@@ -96,7 +96,6 @@ export default {
 `{
     "image_name" : "A",
     "image_version" : "1.0",
-    "image_id" : "aa11bb22cc33",
     "ec2_instance_id" : "11aa22bb33cc",
     "ip_address" : "192.168.0.1",
     "ecs_cluster_name" : "my_test_cluster",
@@ -106,13 +105,30 @@ export default {
                 {/* <blockquote><p>Note: This example is not necessarily how the output would look like.</p></blockquote> */}
 
                 <p>
-                    With just this information and Kibana, we can much more easily determine the cause of the issue. Just log onto Kibana, sort by the image ID and/or any other unique identifiers, and 
-                    skim through the application's logs. On top of that, even before we do an in-depth search, we also know which kind of microservice (<strong>A</strong> or <strong>B</strong>) logged this message, and
-                    its version. The latter is especially important when working in a CICD (Continuous Integration | Continuous Deployment) model. You never know when a version mismatch could be the cause
+                    With just this information and Kibana, we can much more easily determine the cause of the issue. Just log onto Kibana, sort by the instance ID and application type, and 
+                    skim through the available logs. On top of that, even before we do an in-depth search, we also know which kind of microservice (<strong>A</strong> or <strong>B</strong>) logged this message, and
+                    its version. The latter is especially important when working in a CICD (Continuous Integration | Continuous Delivery) model. You never know when a version mismatch could be the cause
                     of your issue.
                 </p>
 
+                <p>
+                    Even with this structure in place, there may be extra information you want to place directly in the logs. For example, there may be meta information about each instance of a microservice that needs to be 
+                    tagged and logged that the log shipper could not do for you. Or perhaps it would be better to have the data repeated or originating from the microservice's logs. Below I will describe a method for adding
+                    custom metadata into Spring Boot application's logs without severely impacting the performance.
+                </p>
 
+                <h1>Customizing SpringBoot Logs (Log4J2 and Logback)</h1>
+                <hr/>
+
+                <p>
+                    For Java applications, there are two main logging frameworks widely used in SpringBoot applications: Log4J2 and Logback. Log4J, the predecessor to Log4J2 is also used often, but
+                    Log4J2 has greatly expanded its functionality. Furthermore, SpringBoot automatically defaults to Logback as its main Logging Framework. For those reasons I will focus solely on 
+                    the Log4J2 and Logback Frameworks. 
+                </p>
+
+                <p>
+                    Before we can add metadata information into 
+                </p>
             </div>
         </div>,
         'title' : 'Customized Logging in SpringBoot'

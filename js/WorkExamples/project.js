@@ -29,8 +29,6 @@ class Project extends React.Component {
                         {work.longDesc}
                     </div>
 
-                    <hr/>
-
                     {/* <div className="project--demo-header">
                         <h1 align="center">Demo - COMING SOON</h1>
                     </div> */}
