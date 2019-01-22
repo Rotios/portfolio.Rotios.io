@@ -31,7 +31,6 @@ if (elements) {
             ReactDOM.render(<Project id={id} work={myWork[1]} component={<FF2EPub work={myWork[1]}/>} />, elements[i])
         }
     }
-    // ReactDOM.render()
 }
 
 const blogBubbles = document.getElementById('blog')
@@ -53,4 +52,21 @@ let footer = document.getElementById("main-footer");
 
 if (footer) {
     ReactDOM.render(<Footer />, footer)
+}
+
+let intro = document.getElementById("intro")
+
+if (intro) {
+    window.onresize = () => { 
+        let intro = document.getElementById('intro')
+        intro.setAttribute("style","height:" + window.innerHeight + "px");
+        intro.style.height = window.innerHeight
+    } 
+    
+    window.onload = () => { 
+        let intro = document.getElementById('intro')
+        intro.setAttribute("style","height:" + window.innerHeight + "px");
+        intro.style.height = window.innerHeight
+    } 
+
 }
