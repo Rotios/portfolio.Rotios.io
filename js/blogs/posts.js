@@ -121,14 +121,41 @@ export default {
                 <hr/>
 
                 <p>
-                    For Java applications, there are two main logging frameworks widely used in SpringBoot applications: Log4J2 and Logback. Log4J, the predecessor to Log4J2 is also used often, but
-                    Log4J2 has greatly expanded its functionality. Furthermore, SpringBoot automatically defaults to Logback as its main Logging Framework. For those reasons I will focus solely on 
+                    For Java applications, there are two main logging framework implementations widely used in SpringBoot applications: Log4J2 and Logback. Log4J, the predecessor to Log4J2 is also used often, but
+                    Log4J2 has greatly expanded its functionality. Furthermore, SpringBoot automatically defaults to Logback as its main logging Implementation. For those reasons I will focus solely on 
                     the Log4J2 and Logback Frameworks. 
                 </p>
 
-                <p>
-                    Before we can add metadata information into 
+                <blockquote><strong>Note:</strong> SLF4J, while the true default logging framework for SpringBoot, is only a facade, and therefore the low level changes we are about to perform cannot be made to it. 
+                </blockquote>
+
+                <p>Before we can get into the individual implementations, I'll explain the general process we are going to use to expose the necessary information.</p>
+
+                <h4>
+                    The main idea
+                </h4>
+
+                <p>The simplest way to get the above information into any SpringBoot microservice is to add the information to the application's logging appender(s). There are a few ways to accomplish this:</p>
+                <ul>
+                    <li>Altering the Configuration File</li>
+                    <li>Altering the Appenders at Runtime</li>
+                </ul>
+
+                <p>The first method is the most cost efficient, as the application has the fields set prior to runtime. This ensures that the application logs what the user wants and ensures that no errors will occur
+                    when running the application. Unfortunately, this method is also not very scalable, as it forces you to update every appender in every application with the latest format, and scripts can only go so far
+                    when every team has their own logging preferences.
                 </p>
+
+                <p>To solve for these issues, we will be taking the second route. We will alter the application's appenders at runtime by creating our own identical appenders. The benefit of this is that we can target most 
+                    applications that use log4j2 or logback without worrying about the actual configuration files. All that they have to use is add a dependency to their project and, if necessary, change their logging implementation's
+                    version.
+                </p>
+
+                <p>Now for the next step...</p>
+
+                <h4>How to get the required information</h4>
+                <p>TBC</p>
+
             </div>
         </div>,
         'title' : 'Customized Logging in SpringBoot'
