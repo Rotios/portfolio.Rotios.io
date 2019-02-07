@@ -12,15 +12,23 @@ import BlogSection from './blogs/blog-section'
 import posts from './blogs/posts'
 import Footer from './footer'
 
-ReactDOM.render(<Title />, document.getElementById("main-header"))
-const myWork = projects
+var shiftWindow = function() { scrollBy(0, -50) };
+window.addEventListener("hashchange", shiftWindow);
+function load() { if (window.location.hash) shiftWindow(); }
 
-if (document.getElementById('example-work')){
-    ReactDOM.render(<ExampleWork work = {myWork} />, document.getElementById("example-work"))
+ReactDOM.render(<Title />, document.getElementById("main-header"))
+
+let footer = document.getElementById("main-footer");
+if (footer) {
+    ReactDOM.render(<Footer />, footer)
+}
+
+const myWork = projects
+if (document.getElementById('Projects')){
+    ReactDOM.render(<ExampleWork work = {myWork} />, document.getElementById("Projects"))
 }
 
 const elements = document.getElementsByClassName('project')
-
 if (elements) {
     var i;
     for (i = 0; i < elements.length; i++) {
@@ -33,8 +41,7 @@ if (elements) {
     }
 }
 
-const blogBubbles = document.getElementById('blog')
-
+const blogBubbles = document.getElementById('Blog')
 if (blogBubbles) {
     ReactDOM.render(<BlogSection blog = {entries}/>, blogBubbles);
 }
@@ -48,25 +55,19 @@ if (blogPosts && blogPosts.length > 0) {
     }
 }
 
-let footer = document.getElementById("main-footer");
-
-if (footer) {
-    ReactDOM.render(<Footer />, footer)
-}
-
 let intro = document.getElementById("intro")
 
 if (intro) {
+    let header_height =  document.getElementById("main-header").offsetHeight
     window.onresize = () => { 
         let intro = document.getElementById('intro')
-        intro.setAttribute("style","height:" + window.innerHeight + "px");
-        intro.style.height = window.innerHeight
+        intro.setAttribute("style","height:" + (window.innerHeight - header_height) + "px");
+        intro.style.height = (window.innerHeight - header_height) 
     } 
     
     window.onload = () => { 
         let intro = document.getElementById('intro')
-        intro.setAttribute("style","height:" + window.innerHeight + "px");
-        intro.style.height = window.innerHeight
+        intro.setAttribute("style","height:" + (window.innerHeight - header_height)  + "px");
+        intro.style.height = (window.innerHeight - header_height) 
     } 
-
 }

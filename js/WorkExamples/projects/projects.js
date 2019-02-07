@@ -78,63 +78,6 @@ export default [
         </div> 
     },
     {
-        'id' : 'ff2epub',
-        'title': "FF2EPub",
-        'href' : '/projects/ff2epub.html',
-        'github': 'https://github.com/Rotios/FF2EPUB',
-        'tools' : ['python', 'fa-chrome'],
-        'demo' : 'https://github.com/Rotios/FF2EPUB',
-        'shortDesc' : <div>
-            <p>
-                A quick Fanfiction.net to EPub converter for those who like to take their fanfiction on the go.
-            </p>
-        </div>,
-        'desc' : <div>
-            <p>
-                A quick Fanfiction.net to EPub converter for those who like to take their fanfiction on the go.
-                Future uses will convert it to a PDF and to .mobi for Amazon Kindle.
-            </p>
-            <p>
-                Written and tested for Python 3.7. 
-            </p>
-        </div>,
-        'longDesc' : <div>
-            <p>
-                I've got a confession to make... I like reading fanfiction... And not those sloppy, poorly written <em>lemons</em> (as the FF community calls them)
-                or simple <em>one-shots</em>, but actual stories which take the time to flesh out their characters, contain real plots, and don't promote any <em>fanservice</em>.
-                I want to see my favorite character challenged in an entirely new way from their canon arcs. I want to see alternate universes or believable crossovers
-                from an author who is as passionate about their characters' universes as I am.
-            </p>
-            <p>
-                That being said, the amount of time I've spent recently reading different Harry Potter and Star-Wars fanfiction
-                stories is astronamically high. My poor eyes, horrible as they already were, have taken huge beatings due to the amount of time 
-                I have spent in front of my tiny phone screen reading, or rereading, my latest fanfic. As much as I would love to read
-                ff stories like I read my regular hardcover/paperback books, it's just impossible without feeling some eye strain.
-            </p>
-            <p>    
-                Another glaring issue with reading fanfiction is its realiance on internet connectivity, as each chapter
-                must be fetched from the site one at a time, and while internet connectivity 
-                isn't the issue it used to be (<em>#21stCenturyLiving</em>), there are still times when an internet connection may not be easily found 
-                (i.e. stuck on an airplane from an airline that refuses to provide free internet service -- you know who you are!). 
-                FF.net's <em>official</em> app addresses this issue by allowing you to download and store whichever story you are currently reading on your phone.
-                Unfortunately, this means using the rather clunky app and it's odd formatting. Plus, it doesn't really solve the eye strain issue.
-            </p>
-            <p>
-                So, how can we fix both of these problems? Why, with an EBook Reader of course! The only question is, how do we get the fanfiction story there?
-            </p>
-            <p>
-                That's where this lovely project comes into the picture. With this <a href='https://github.com/Rotios/FF2EPUB'>python script</a>, you can convert any Fanfiction.net story into a full fledged EBook in EPub format. 
-                Once converted, getting it onto your Kindle from there is a simple matter of emailing it to your Amazon Kindle account email, or using their Kindlegen CLI tool. 
-                If you don't have a Kindle, but have another EBook Reader that reads .EPUB files, then you are all set to go!
-            </p>
-            <p>
-                Of course, there are plenty of other sites that have a fanfiction to EPub (or at least text/html to EPub) converter already. However, as a software engineer, a lover of code, and a skeptic, 
-                I cannot bring myself to trust a utility which downloads unverified files onto my computer without being able to see the code myself. So without further ado, here's an in depth description into my
-                FF2EPub Utility.
-            </p>
-        </div>
-    }, 
-    {
         'id':'rotios.io',
         'title':"Rotios.IO",
         'href' : 'https://portfolio.rotios.io/',
