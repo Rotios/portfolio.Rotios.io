@@ -1,0 +1,31 @@
+.section--alignCentered {
+    text-align: center;
+}
+
+.section {
+    font-size: 3rem;
+    position: relative;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.section__text--centered {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    line-height: 8rem;
+}
+
+
+.section--description {
+    font-size: 2rem;
+    padding-left: 2.0rem;
+    padding-right: 2.0rem;
+}
+
+
+.section__description {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 75%;
+}

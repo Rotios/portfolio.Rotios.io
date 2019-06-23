@@ -3,19 +3,11 @@ phases:
   build:
     commands:
       - npm install
-      - npm run webpack
+      - npm run start
 
   
 artifacts:
   files:
-    - index.html
-    - favicon.ico
-    - styles/*
-    - images/*
     - dist/bundle.js
-    - js/*
-    - js/projects/*
-    - js/common/*
-    - projects/*.html
-    - blogs/*
-    - projects/*
+    - src/**
+    - public/**

@@ -1,0 +1,34 @@
+
+.section--social {
+    float: right;
+    margin-right: 2rem;
+    margin-top: 2rem;
+}
+
+.social--text,
+.social{
+    margin-right: 1.8rem;
+    color: rgb(236, 240, 241);
+}
+
+.social--text {
+    margin-right: 2.5rem !important;
+}
+
+.social:hover {
+    color: rgb(236, 240, 241);
+    text-decoration: none;
+}
+
+.social:visited {
+    color: rgb(236, 240, 241);;
+}
+
+.socialWrapper:last-child .social {
+    margin-right: 0;
+}
+
+.socialWrapper {
+    display: inline-block;
+    font-size: 2.5rem;
+}

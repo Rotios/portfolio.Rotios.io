@@ -1,37 +1,26 @@
 {
-  "name": "my-first-portfolio",
-  "version": "0.0.1",
-  "description": "My first test portfolio",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack",
-    "webpack-watch": "webpack --watch"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Rotios/portfolioexample.Rotios.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Rotios/portfolioexample.Rotios.io/issues"
-  },
-  "homepage": "https://github.com/Rotios/portfolioexample.Rotios.io#readme",
+  "name": "notes-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "aws-amplify": "^1.1.6",
+    "react": "^16.5.2",
+    "react-bootstrap": "^0.32.4",
+    "react-dom": "^16.5.2",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4"
   },
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-react": "^6.24.1",
-    "react-prism": "^4.3.2",
-    "webpack": "^4.2.0",
-    "webpack-cli": "^2.0.13"
-  }
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

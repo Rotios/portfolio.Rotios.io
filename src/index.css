@@ -1,0 +1,186 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+}
+
+
+@media (max-width: 640px) {
+  body {
+      min-width: 600px !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Cardo', serif;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: .1rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PT Serif", serif;
+}
+
+h2 {
+  font-size: 6rem;
+  padding-bottom: 5rem;
+  line-height: 8rem;
+  letter-spacing: .1rem;
+  font-weight: 600;
+}
+
+select.form-control,
+textarea.form-control,
+input.form-control {
+  font-size: 16px;
+}
+input[type=file] {
+  width: 100%;
+}
+
+.fa__text {
+  font-size: 3.25rem;
+  bottom: 0.5rem;
+}
+
+
+@media (max-width: 1444px) { 
+  /* .main__body {
+    margin-right: 10rem;
+    margin-left: 10rem;
+  } */
+  
+  .project--description {
+    font-size: 2rem;
+    padding-left: 14rem;
+    padding-right: 8rem;
+  }
+  
+  .project--short-description {
+    font-size: 1.75rem;
+    padding-left: 15rem;
+    padding-right: 9rem;
+  }
+}
+
+@media (max-width: 980px) { 
+  .section {
+    height: auto !important;
+  }
+
+  .project--description {
+    font-size: 2rem;
+    padding-left: 10rem;
+    padding-right: 4rem;
+  }
+  
+  .project--short-description {
+    font-size: 1.75rem;
+    padding-left: 11rem;
+    padding-right: 5rem;
+  }
+
+  .intro--item-text {
+    line-height: 4rem;
+    font-size: 3rem;
+  }
+
+  .intro ul li{
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .intro--header-text {
+    line-height: 10rem;
+    font-size: 9rem;
+  }
+  
+  .intro--section {
+    padding: 1rem;
+  }
+
+  
+  .intro {
+    height: 80vh !important;
+  }
+
+}
+
+
+@media (max-width: 640px) { 
+  .section {
+    height: auto !important;
+  }
+
+  .intro--item-text {
+    line-height: 4rem;
+    font-size: 3rem;
+  }
+
+  .intro ul li{
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  
+  .intro--header-text {
+    line-height: 10rem;
+    font-size: 9rem;
+  }
+  
+  .intro--section {
+    padding: 1rem;
+  }
+
+  .main__background,
+  .main__body,
+  .section,
+  .title__header {
+    width: 640px !important;
+  }
+
+  .intro {
+    height: 700px !important;
+  }
+}
+
+
+
+@media (max-height: 640px) { 
+
+  .intro--item-text {
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+
+  .intro ul li{
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  
+  .intro--header-text {
+    line-height: 7rem;
+    font-size: 7rem;
+  }
+  
+  .intro--section {
+    padding: 1rem;
+  }
+  .intro {
+    height: 300px !important;
+  }
+}

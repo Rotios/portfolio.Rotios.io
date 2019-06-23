@@ -1,0 +1,124 @@
+
+.section__exampleWrapper,
+.section__example {
+  display: inline-block;
+  height: 35rem;
+  width: 35rem;
+}
+
+.section__exampleWrapper {
+    margin-right: 4rem;
+  }
+  
+  .section__example,
+  .section__exampleWrapper {
+    display: inline-block;
+    height: 35rem;
+    width: 35rem;
+  }
+
+.section__example {
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    height: 35rem;
+    width: 30rem;
+    font-size: 80%;
+    background-color: rgb(44, 62, 80);
+
+}
+
+.section__exampleTitle{
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 3rem;
+    text-transform: uppercase;
+    -ms-flex: 1 1;
+    flex: 1 1;
+    padding: 1rem 1.5rem;
+    font-weight: 400;
+}
+
+.section__exampleImage {
+  opacity: 0.25;
+  width: 250%;
+  margin-left: -50%;
+  margin-top: -50%;
+}
+
+
+.section__exampleText p {
+  font-size: 1.5rem !important;
+  padding-top: 0.5rem;
+}
+
+.section__exampleText {
+    font-size: 1.5rem !important;
+    text-align: center;
+    line-height: 3rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: 400;
+}
+
+.display--inline {
+    display: inline;
+  }
+  
+  
+  .display--inline-block {
+    display: inline-block;
+  }
+  
+.section__exampleButton {
+    padding-top: 1rem;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.section__exampleTool {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 3rem;
+}
+
+
+.section__exampleButton:visited {
+  color:white;
+}
+
+.section__exampleButtonLayout {
+  padding: 1rem 1.5rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: absolute;
+  bottom: 1rem;
+  margin-right: 1rem;
+  right:0;
+}
+
+#buttonLayout {
+    padding-top: 1rem;
+}
+
+.work-group {
+  padding-bottom: 3rem;
+}

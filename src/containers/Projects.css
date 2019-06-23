@@ -1,0 +1,53 @@
+h3 {
+    font-weight: 600;
+    font-size: 4rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.Projects .lander {
+    /* padding: 80px 0; */
+    text-align: center;
+  }
+  
+  .Projects .lander h1 {
+    font-weight: 600;
+    font-size: 12rem;
+  }
+  
+  .Projects .lander .body-elem p {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #777;
+  }
+  .Projects .lander .body-elem a {
+    font-size: 3rem;
+  }
+
+  .project-header {
+    padding-bottom: 4rem;
+    padding-top: 3rem;
+  }
+  
+  .Projects .lander section {
+    min-height: 20vh;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    overflow: hidden;
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Projects .lander section:last-child {
+    margin-bottom:0;
+  }

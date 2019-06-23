@@ -1,0 +1,21 @@
+.App {
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: rgb(236, 240, 241);
+  height: 100%;
+}
+
+.App .navbar-brand {
+  font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 100% !important;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 100% !important;
+  }
+}

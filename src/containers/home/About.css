@@ -1,0 +1,19 @@
+
+.about--text-wrapper {
+    border: 1rem dashed #45a29e;
+    padding: 4rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    width: 50%;
+}
+
+.about--section h2 {
+    font-size: 6rem;
+    padding-bottom: 5rem;
+}
+
+.about--section {
+    padding: 4rem;
+    padding-top: 10rem !important;
+    padding-bottom: 4rem !important;
+}
