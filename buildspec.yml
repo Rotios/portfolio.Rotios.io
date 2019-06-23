@@ -3,7 +3,6 @@ phases:
   build:
     commands:
       - npm install
-      - npm run start
 
   
 artifacts:
