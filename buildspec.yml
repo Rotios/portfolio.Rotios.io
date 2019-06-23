@@ -7,6 +7,5 @@ phases:
   
 artifacts:
   files:
-    - dist/bundle.js
-    - src/**
-    - public/**
+    - src/**/*
+    - public/**/*
