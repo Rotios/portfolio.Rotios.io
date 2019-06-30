@@ -1,6 +1,4 @@
 import React from 'react';
-import '../libs/prism.css'
-import PrismCode from '../libs/prism'
 
 export const myWork = {
     "blogs": [

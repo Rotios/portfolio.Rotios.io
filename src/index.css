@@ -7,13 +7,6 @@ body {
   height: 100%;
 }
 
-
-@media (max-width: 640px) {
-  body {
-      min-width: 600px !important;
-  }
-}
-
 html {
   font-size: 62.5%;
 }
@@ -119,6 +112,10 @@ input[type=file] {
     height: 80vh !important;
   }
 
+  html {
+    font-size: 60%;
+  }
+
 }
 
 
@@ -149,13 +146,20 @@ input[type=file] {
   .main__background,
   .main__body,
   .section,
-  .title__header {
-    width: 640px !important;
+  .title__header,
+  .header,
+  html {
+    min-width: 600px !important;
+  }
+
+  html {
+    font-size: 50%;
   }
 
   .intro {
     height: 700px !important;
   }
+
 }
 
 
@@ -182,5 +186,16 @@ input[type=file] {
   }
   .intro {
     height: 300px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .main__background,
+  .main__body,
+  .section,
+  .title__header,
+  .header,
+  html {
+    min-width: 475px !important;
   }
 }
