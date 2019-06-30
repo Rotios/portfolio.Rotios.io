@@ -1,14 +1,14 @@
 {
-  "main.css": "/static/css/main.9281afb8.chunk.css",
-  "main.js": "/static/js/main.c54415f1.chunk.js",
-  "main.js.map": "/static/js/main.c54415f1.chunk.js.map",
-  "static/js/1.b418196f.chunk.js": "/static/js/1.b418196f.chunk.js",
-  "static/js/1.b418196f.chunk.js.map": "/static/js/1.b418196f.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
-  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
-  "static/media/Home.css": "/static/media/background.3e3b3cf7.jpg",
-  "static/css/main.9281afb8.chunk.css.map": "/static/css/main.9281afb8.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.27c0a3510df95d41919e1c55d0976da4.js": "/precache-manifest.27c0a3510df95d41919e1c55d0976da4.js",
-  "service-worker.js": "/service-worker.js"
+  "main.css": "/portfolio.Rotios.io/static/css/main.9ec347ae.chunk.css",
+  "main.js": "/portfolio.Rotios.io/static/js/main.5039659a.chunk.js",
+  "main.js.map": "/portfolio.Rotios.io/static/js/main.5039659a.chunk.js.map",
+  "static/js/1.5cdbfbeb.chunk.js": "/portfolio.Rotios.io/static/js/1.5cdbfbeb.chunk.js",
+  "static/js/1.5cdbfbeb.chunk.js.map": "/portfolio.Rotios.io/static/js/1.5cdbfbeb.chunk.js.map",
+  "runtime~main.js": "/portfolio.Rotios.io/static/js/runtime~main.dd6781fc.js",
+  "runtime~main.js.map": "/portfolio.Rotios.io/static/js/runtime~main.dd6781fc.js.map",
+  "static/media/Home.css": "/portfolio.Rotios.io/static/media/background.3e3b3cf7.jpg",
+  "static/css/main.9ec347ae.chunk.css.map": "/portfolio.Rotios.io/static/css/main.9ec347ae.chunk.css.map",
+  "index.html": "/portfolio.Rotios.io/index.html",
+  "precache-manifest.7f399f62aada08eedd6e7624fa76e8d1.js": "/portfolio.Rotios.io/precache-manifest.7f399f62aada08eedd6e7624fa76e8d1.js",
+  "service-worker.js": "/portfolio.Rotios.io/service-worker.js"
 }
