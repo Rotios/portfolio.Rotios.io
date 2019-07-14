@@ -30,7 +30,7 @@ export default class Home extends Component {
           <h1>Jose Rivas</h1>
           <p>Software Engineer</p>
           <div>
-            <Link to="#about" className="btn btn-info btn-lg">
+            <Link to="../files/RivasResume.pdf" className="btn btn-info btn-lg" download>
               Resume
             </Link>
             <a rel="noopener noreferrer" target="_blank" href="https://www.github.com/rotios" className="btn btn-success btn-lg">
