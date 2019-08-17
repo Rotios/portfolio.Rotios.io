@@ -1,6 +1,7 @@
 
 import React, { Component } from "react"
 import Cell from "./Cell"
+import Solver from './Solver'
 import '../../../common/Colors.css'
 import './Minesweeper.css'
 
@@ -9,9 +10,10 @@ export default class Board extends Component {
         super(props);
 
         this.state = this.initBoard(this.props.height, this.props.width, this.props.numMines)    
+        this.state['revealed'] = 0
     }
     
-    componentDidMount() {
+    async componentDidMount() {
     }
 
     initBoard(height, width, mines) {
@@ -27,7 +29,8 @@ export default class Board extends Component {
                     isMine: false, 
                     isFlagged:false, 
                     isHidden:true, 
-                    value:0
+                    value:0,
+                    highlight: ""
                 }
                 innerArr.push(cellData)
             }
@@ -41,6 +44,8 @@ export default class Board extends Component {
 
             if (!arr[nextPos[0]][nextPos[1]].isMine) {
                 arr[nextPos[0]][nextPos[1]].isMine = true
+                arr[nextPos[0]][nextPos[1]].value = -1
+            
                 count += 1
             }
         }
@@ -55,10 +60,11 @@ export default class Board extends Component {
 
             for (y; y<height; y++) {
                 if (data[x][y].isMine) {
-                    let minX = x-1
-                    for (minX; minX < x+2 && minX < width && minX>0; minX++) {
-                        let minY = y - 1
-                        for (minY; minY<height && minY < height && minY>0; minY++) {
+                    let minX = (x > 0) ? x-1 : x
+                    for (minX; minX < x+2 && minX < width; minX++) {
+                        let minY = (y>0) ? y - 1 : y
+
+                        for (minY; minY< (y+2) && minY < height; minY++) {
                             data[minX][minY].value+=1
                         }
                     }
@@ -75,16 +81,119 @@ export default class Board extends Component {
         let x = Math.floor(randVal/width)
         let y = randVal % height
         
-        console.log([x,y])
         return [x,y]
     }
 
     handleCellClick(x,y) {
+        let data = this.state.board
+        let cell = data[x][y]
 
+        let revealed = this.state.revealed
+
+        if (cell.isHidden === false || cell.isFlagged === true) {
+            this.checkWin(revealed)
+
+            return 
+        }
+
+        if (cell.isMine === true) {
+            this.revealAll()
+            return 
+        }
+        if (cell.value > 0) {
+            cell.isHidden = false
+
+            this.updateBoard(data);
+            revealed++
+        } else {
+            revealed += this.revealEmpty(x, y);
+        }
+
+        console.log(revealed)
+
+        this.setState({'revealed': revealed})
+
+        this.checkWin(revealed)
+        return 
+    }
+
+    checkWin(revealed) {
+        if (revealed === (this.props.width * this.props.height - this.props.numMines)) {
+            this.revealAll()
+        }
+    }
+
+    highlightCell(x, y, color) {
+        let data = this.state.board
+        let cell = data[x][y]
+        cell.highlight = (color != null) ? " " + color : ""
+        this.updateBoard(data)
+    }
+
+    revealEmpty(x, y) {
+        let data = this.state.board
+        let stack = []
+        stack.push({xPos: x, yPos: y})
+        data[x][y].isHidden = false
+
+        let revealed = 1
+
+        while (stack.length > 0) {
+
+            let cellLoc = stack.pop()
+            let cellX = cellLoc.xPos
+            let cellY = cellLoc.yPos
+
+
+            let minX = (cellX > 0) ? cellX - 1 : cellX;
+            for (minX; minX < cellX + 2 && minX < this.props.width; minX++) {
+                let minY = (cellY > 0) ? cellY - 1 : cellY;
+                for (minY; minY < (cellY + 2) && minY < this.props.height; minY++) {
+                    let curCell = data[minX][minY]
+
+                    if (curCell.isHidden === true) {
+                        curCell.isHidden = false
+                        revealed++
+                        if (curCell.value === 0) {
+                            stack.push({xPos: minX, yPos: minY})
+                        }
+                    }
+                    
+                }
+            }
+        }
+
+        this.updateBoard(data);
+        return revealed
+    }
+
+    updateBoard(data) {
+        this.setState({ board: data });
     }
 
     handleContextMenu(e,x,y) {
-        
+        e.preventDefault()
+
+        let data = this.state.board
+        let cell = data[x][y]
+        if (cell.isHidden) {
+            cell.isFlagged = !cell.isFlagged
+            this.updateBoard(data)
+        }
+    }
+
+    revealAll() {
+        let data = this.state.board
+        let x = 0
+
+        for (x; x<this.props.width; x++) {
+            let y = 0
+            for (y; y<this.props.height; y++) {
+                data[x][y].isHidden = false
+            }
+        }
+
+        this.updateBoard(data)
     }
 
     renderCells() {
@@ -96,10 +205,12 @@ export default class Board extends Component {
 
             for (y; y<this.props.height; y++) {
                 let cellInfo = this.state.board[x][y]
-                innerArr.push(<Cell key={x*this.props.width+y} isMine={cellInfo.isMine} 
+                let xPos = x
+                let yPos = y
+                innerArr.push(<Cell key={x*this.props.width+y} highlight={cellInfo.highlight} isMine={cellInfo.isMine} 
                         isFlagged={cellInfo.isFlagged} isHidden={cellInfo.isHidden} value={cellInfo.value}
-                        onClick={() => this.handleCellClick(x, y)}
-                        cMenu={(e) => this.handleContextMenu(e, x, y)}
+                        onClick={() => this.handleCellClick(xPos, yPos)}
+                        onCtxMenu={(e) => this.handleContextMenu(e, xPos, yPos)}
                     />)
             }
             innerArr.push(<div className='clear'></div>)
@@ -111,11 +222,18 @@ export default class Board extends Component {
 
     render() {
         let arr = this.renderCells()
-      return (
-        <section className="board">
-            {arr}
-        </section>
-      );
+        return (
+            <section>
+                <section>
+                    <h1 class="game-title">Game On</h1>
+                </section>
+                <section className="board">
+                    {arr}
+                </section>
+
+                <Solver board={this} height={10} width={10} numMines={10}/>
+            </section>
+        );
     }
   }
   

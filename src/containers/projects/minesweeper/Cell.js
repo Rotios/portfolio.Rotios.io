@@ -22,6 +22,9 @@ export default class ProjectSection extends Component {
 
     render() {
         let cName = (this.props.isHidden) ? "cell hidden" : "cell"
+
+        cName += this.props.highlight
+ 
         return (
             <section className={cName} onClick={this.props.onClick} onContextMenu={this.props.onCtxMenu}>
                 {this.getChar()}

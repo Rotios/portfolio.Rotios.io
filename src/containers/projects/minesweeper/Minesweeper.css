@@ -57,3 +57,43 @@ body {
   .is-mine {
     color: #fc543c;
   }
+
+  .highlight-bomb {
+    background: yellow !important
+  }
+
+  .highlight-safe {
+    background: green !important
+  }
+
+  .game-title {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .hint-buttons {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    margin-bottom:1rem;
+    border-radius: 1rem;
+    line-height: 3rem;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: rgb(44, 62, 80);
+    color: white;
+    width: 14rem;
+  }
+
+  .hint-buttons-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hint-buttons:hover {
+    background-color: #4CAF50; /* Green */
+    color: white;
+  }
