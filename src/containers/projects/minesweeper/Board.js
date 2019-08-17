@@ -8,9 +8,10 @@ import './Minesweeper.css'
 export default class Board extends Component {
     constructor(props) {
         super(props);
-
         this.state = this.initBoard(this.props.height, this.props.width, this.props.numMines)    
         this.state['revealed'] = 0
+        this.state['gameOver'] = false
+        this.state['won'] = false
     }
     
     async componentDidMount() {
@@ -75,6 +76,16 @@ export default class Board extends Component {
         return {board: data}
     }
 
+    hideAll() { 
+        this.setState(this.initBoard(this.props.height, this.props.width, this.props.numMines))
+
+        this.setState({
+            gameOver: false,
+            won: false,
+            revealed : 0
+        })
+    }
+
     getNextMinePos(height, width) {
         let randVal = Math.floor(Math.random() * height*width)
 
@@ -89,6 +100,10 @@ export default class Board extends Component {
         let cell = data[x][y]
 
         let revealed = this.state.revealed
+
+        if (this.state.gameOver) {
+            this.hideAll()
+        }
 
         if (cell.isHidden === false || cell.isFlagged === true) {
             this.checkWin(revealed)
@@ -111,7 +126,7 @@ export default class Board extends Component {
 
         console.log(revealed)
 
-        this.setState({'revealed': revealed})
+        this.setState({revealed: revealed})
 
         this.checkWin(revealed)
         return 
@@ -119,6 +134,7 @@ export default class Board extends Component {
 
     checkWin(revealed) {
         if (revealed === (this.props.width * this.props.height - this.props.numMines)) {
+            this.setState({won:true})
             this.revealAll()
         }
     }
@@ -183,6 +199,8 @@ export default class Board extends Component {
     }
 
     revealAll() {
+        this.setState({'gameOver': true})
+
         let data = this.state.board
         let x = 0
 
@@ -221,17 +239,34 @@ export default class Board extends Component {
     }
 
     render() {
-        let arr = this.renderCells()
+        let arr = this.renderCells()   
+        let s = 'Game On'
+
+        if (this.state.gameOver) {
+            s = (this.state.won) ? 'You Won' : 'Game Over'
+        }
         return (
             <section>
                 <section>
-                    <h1 class="game-title">Game On</h1>
+                    <h1 class="game-title">{s}</h1>
                 </section>
                 <section className="board">
                     {arr}
                 </section>
 
-                <Solver board={this} height={10} width={10} numMines={10}/>
+                <Solver board={this} height={this.props.height} width={this.props.height} numMines={this.props.numMines}/>
+                
+                {/* <label for="fname">Height: </label>
+                <input type="text" id="fname" name="height" placeholder="Number"/>
+                
+                <label for="fname">Width: </label>
+                <input type="text" id="fname" name="width" placeholder="Number"/>
+                <br/>
+
+                
+                <label for="fname">Mines: </label>
+                <input type="text" id="fname" name="mineNum" placeholder="Number"/> */}
+                
             </section>
         );
     }

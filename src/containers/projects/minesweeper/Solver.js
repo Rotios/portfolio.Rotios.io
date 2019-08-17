@@ -34,11 +34,11 @@ export default class Solver extends Component {
 
         if (expansions != null && expansions.clickable != null && expansions.clickable.length > 0) {
             //Map too fast to update reveal count
-            for (let x = 0; x < expansions.clickable.length; x++) {
-                let cell = expansions.clickable[x]
-                this.state.board.handleCellClick(cell.xPos, cell.yPos)
-                this.state.board.highlightCell(cell.xPos, cell.yPos, ' highlight-safe')
-            }
+        
+            let cell = expansions.clickable[0]
+            this.state.board.handleCellClick(cell.xPos, cell.yPos)
+            this.state.board.highlightCell(cell.xPos, cell.yPos, ' highlight-safe')
+            
         }
     }
 
