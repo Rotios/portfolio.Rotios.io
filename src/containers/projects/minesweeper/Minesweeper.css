@@ -1,7 +1,7 @@
 body {
     margin: 20px;
     padding: 0;
-    font-family: sans-serif;
+    font-family: sans-serif !important;
   }
   .clear {
     clear: both;
@@ -127,3 +127,77 @@ body {
   input[type=submit]:hover {
     background-color: #45a049;
   }
+
+  .description {
+    padding-top: 5rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  
+
+@media (max-width: 1444px) { 
+  .description {
+    padding-top: 5rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+}
+
+@media (max-width: 980px) { 
+  .description {
+    padding-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+}
+
+
+@media (max-width: 640px) { 
+  .section {
+    height: auto !important;
+  }
+
+  html {
+    min-width: 600px !important;
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .description {
+    padding-top: 5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding-right: 10rem;
+    padding-left: 10rem;
+  }
+
+}
+
+@media (max-width: 500px) {
+  html {
+    min-width: 475px !important;
+  }
+}

@@ -24,7 +24,7 @@ export default class Minesweeper extends Component {
                 </div>
             </section>
 
-            <section className="background--cloud">
+            <section className="background--cloud description">
               <p>
                 Air travel is boring. Yes, I know, stating the obvious much, right? Well,
                 the other day I was stuck on a plane for a few hours going across the beautiful US of A,
