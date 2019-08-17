@@ -25,7 +25,7 @@ export default class Minesweeper extends Component {
             </section>
 
             <section className="game background--cloud">
-                <Board height={16} width={16} numMines={40}></Board>
+                <Board height={10} width={10} numMines={12}></Board>
             </section>
         
         </section>
